@@ -2,15 +2,20 @@ package org.BridgeLabz;
 import java.util.Scanner;
 public class Logical_Pro {
     public static void main(String[] args) {
+        int n, sum=0;
+        System.out.println("Enter any number");
         Scanner sc = new Scanner(System.in);
-        int x = 0 , y = 1, sum = 0, n;
-        System.out.println("Enter the valu ");
         n = sc.nextInt();
-        for( int i=0; i<=n; i++){
-            System.out.println(sum);
-            x = y;
-            y = sum;
-            sum = x+y;
-        }
+
+        for(int i=1; i<n; i++){
+            if(n%i==0){
+                sum = sum+i;
+            }
+        } if(n==sum)
+            System.out.println("Perfect number");
+
+        else
+            System.out.println("Number is not perfect number");
+
     }
 }
